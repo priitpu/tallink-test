@@ -1,0 +1,29 @@
+.card {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    &--transparent {
+        background-color: transparent;
+    }
+    &__content {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        word-wrap: break-word;
+        height: 100%;
+    }
+    &__price {
+        margin-top: auto;
+    }
+    &__image {
+        img {
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

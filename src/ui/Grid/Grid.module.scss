@@ -1,0 +1,11 @@
+.grid {
+    box-sizing: border-box;
+    display: flex;
+    max-width: 960px;
+    flex-direction: column;
+    margin: 0 auto;
+    column-gap: 16px;
+    @media screen and (min-width: 800px) {
+        column-gap: 24px;
+    }
+}
