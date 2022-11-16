@@ -1,72 +1,78 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs';
 import Grid from "../ui/Grid";
+import GridBase from "../ui/Grid/Grid";
+import GridColumn from "../ui/Grid/Column";
+import GridRow from "../ui/Grid/Row";
 
 <Meta title="UI/Grid" />
 
-<Grid.Base>
-    <Grid.Row>
-        <Grid.Column col={12} md={4}>
-            <Card
-                title="Asd"
-                image="https://via.placeholder.com/600x400?text=16:9"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ligula ac nunc varius consectetur."
-                priceDescription="Room starting at"
-                price={106}
-                link="https://www.google.com"
-            />
-        </Grid.Column>
-        <Grid.Column col={6} md={2}>
-            <Card
-                title="Asd"
-                image="https://via.placeholder.com/600x400?text=16:9"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ligula ac nunc varius consectetur."
-                priceDescription="Room starting at"
-                price={106}
-                link="https://www.google.com"
-            />
-        </Grid.Column>
-    </Grid.Row>
-    <Grid.Row>
-        <Grid.Column col={6} md={2}>
-            <Card
-                title="Asd"
-                image="https://via.placeholder.com/600x400?text=16:9"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ligula ac nunc varius consectetur."
-                priceDescription="Room starting at"
-                price={106}
-                link="https://www.google.com"
-            />
-        </Grid.Column>
-        <Grid.Column col={6} md={2}>
-            <Card
-                title="Asd"
-                image="https://via.placeholder.com/600x400?text=16:9"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ligula ac nunc varius consectetur."
-                priceDescription="Room starting at"
-                price={106}
-                link="https://www.google.com"
-            />
-        </Grid.Column>
-        <Grid.Column col={6} md={2}>
-            <Card
-                title="Asd"
-                image="https://via.placeholder.com/600x400?text=16:9"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ligula ac nunc varius consectetur."
-                priceDescription="Room starting at"
-                price={106}
-                link="https://www.google.com"
-            />
-        </Grid.Column>
-    </Grid.Row>
-    <Grid.Row>
-        <Grid.Column sm={3} md={3}>
-            <Card>
-                <div>custom content</div>
-            </Card>
-        </Grid.Column>
-        <Grid.Column sm={3} md={3}>
-            <Card>
-                <div>custom content</div>
-            </Card>
-        </Grid.Column>
-    </Grid.Row>
-</Grid.Base>
+# Grid system
+
+The grid system uses a series of containers, rows, and columns to layout and align content.
+
+The base of a Grid is `<Grid.Base>`, followed by a `<Grid.Row>` filled with `<Grid.Column>`.
+
+<Canvas>
+    <Grid.Base>
+        <Grid.Row>
+            <Grid.Column col={12}>
+                <div style={{border: "1px solid black", width: "100%"}}>col-12</div>
+            </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+            <Grid.Column col={4}>
+                <div style={{border: "1px solid black", width: "100%"}}>col-4</div>
+            </Grid.Column>
+            <Grid.Column col={8}>
+                <div style={{border: "1px solid black", width: "100%"}}>col-8</div>
+            </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+            <Grid.Column xs={3}>
+                <div style={{border: "1px solid black", width: "100%"}}>xs-3</div>
+            </Grid.Column>
+            <Grid.Column xs={1}>
+                <div style={{border: "1px solid black", width: "100%"}}>xs-1</div>
+            </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+            <Grid.Column sm={2}>
+                <div style={{border: "1px solid black", width: "100%"}}>sm-2</div>
+            </Grid.Column>
+            <Grid.Column lg={4}>
+                <div style={{border: "1px solid black", width: "100%"}}>sm-2</div>
+            </Grid.Column>
+            <Grid.Column md={2}>
+                <div style={{border: "1px solid black", width: "100%"}}>md-2</div>
+            </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+            <Grid.Column md={2}>
+                <div style={{border: "1px solid black", width: "100%"}}>md-2</div>
+            </Grid.Column>
+            <Grid.Column md={2}>
+                <div style={{border: "1px solid black", width: "100%"}}>md-2</div>
+            </Grid.Column>
+            <Grid.Column md={2}>
+                <div style={{border: "1px solid black", width: "100%"}}>md-2</div>
+            </Grid.Column>
+        </Grid.Row>
+    </Grid.Base>
+</Canvas>
+
+### Columns
+The grid is split into 4 columns on screens smaller than 600px, 6 columns on screens smaller than 1024px and 12 columns on anything wider than that.
+
+<Canvas>
+    <Grid.Base>
+        <Grid.Row>
+            <Grid.Column col={12}>
+                <div style={{border: "1px solid black", width: "100%"}}>col-12</div>
+            </Grid.Column>
+        </Grid.Row>
+    </Grid.Base>
+</Canvas>
+
+### Available properties
+
+<ArgsTable of={GridColumn}/>

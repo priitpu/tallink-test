@@ -1,9 +1,11 @@
+@use "sass:math";
 
 @mixin columnGenerator($name, $cols) {
     @for $i from 1 through $cols {
         &--#{$name}-#{$i} {
-            max-width: calc(((1 / $cols) * $i) * 100%);
-            flex: 0 1 ((1 / $cols) * $i) * 100%;
+            max-width: calc((math.div(1,$cols) * $i) * 100%);
+            flex: 1 0 (math.div(1, $cols) * $i) * 100%;
+            flex-basis: 0;
         }
     }
 }

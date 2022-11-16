@@ -1,0 +1,80 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs';
+import Grid from "../ui/Grid";
+import Card from "../ui/Card/Card";
+
+<Meta title="UI/Card" />
+
+# Card
+
+## Default card
+
+<Canvas>
+    <div style={{backgroundColor: "#eee"}}>
+        <Grid.Base>
+            <Grid.Row>
+                <Grid.Column col={6}>
+                    <Card
+                        title="Card"
+                        image="https://via.placeholder.com/600x400?text=16:9"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ligula ac nunc varius consectetur."
+                        priceDescription="Price description"
+                        price={106}
+                        link="https://www.google.com"
+                    />
+                </Grid.Column>
+                <Grid.Column col={6}>
+                    <Card
+                        title="Transparent"
+                        image="https://via.placeholder.com/600x400?text=16:9"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ligula ac nunc varius consectetur."
+                        priceDescription="Price description"
+                        price={44444}
+                        link="https://www.google.com"
+                        transparent
+                    />
+                </Grid.Column>
+            </Grid.Row>
+        </Grid.Base>
+    </div>
+</Canvas>
+
+## Card with custom content
+
+If necessary, the card component can also be used with custom content by adding the content as a child. Card with custom content and prefilled card are mutually exclusive.
+
+<Canvas>
+    <div style={{backgroundColor: "#eee"}}>
+        <Grid.Base>
+            <Grid.Row>
+                <Grid.Column col={4}>
+                    <Card>
+                        <div style={{padding: "16px"}}>
+                            <h1>Card with custom content</h1>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </Card>
+                </Grid.Column>
+                <Grid.Column col={4}>
+                    <Card>
+                        <div style={{padding: "16px"}}>
+                            <h1>Card with custom content</h1>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </Card>
+                </Grid.Column>
+                <Grid.Column col={4}>
+                    <Card>
+                        <div style={{padding: "16px"}}>
+                            <h1>Card with custom content</h1>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                    </Card>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid.Base>
+    </div>
+</Canvas>
+
+### Available properties
+
+<ArgsTable of={Card} />

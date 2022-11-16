@@ -6,6 +6,7 @@ interface IProps {
   price?: number;
   priceDescription?: string;
   link?: string;
+  linkText?: string;
   description?: string;
   children?: never;
 }
@@ -16,6 +17,7 @@ interface ICustomContent {
   price?: never;
   priceDescription?: never;
   link?: never;
+  linkText?: never;
   description?: never;
   children: React.ReactNode;
 }

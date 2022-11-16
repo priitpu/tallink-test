@@ -21,6 +21,7 @@ const Column: React.FC<IProps> = ({
 }: IProps) => {
   const sizeClassNames = () => {
     return Object.entries({ col, xs, sm, md, lg, xl })
+    .filter(([, val]) => val)
       .map(([key, val]) => {
         if (typeof val === "boolean") {
           return `${style[`column--${key}`]}`;

@@ -1,10 +1,12 @@
 import "./App.css";
 import Card from "./ui/Card/Card";
 import Grid from "./ui/Grid";
+import Header from "./ui/Header/Header";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Grid.Base>
         <Grid.Row>
           <Grid.Column col={12} md={4}>
